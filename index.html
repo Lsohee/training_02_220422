@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+
+  <script>
+
+    const root = document.getElementById("root");
+    console.dir(root);
+    console.dir(root.children);
+    console.log(root.children[0]);
+    console.dir(root.children[0]);
+    // 이거 어차피 문자열 꾸러미 인데 그냥 한번에 변수에다가 저장하면 안돼?
+    //배열?
+
+    const textArray = ["큐브 가만안둬","요 금쪽이들"]; 
+    
+    
+    
+    
+    root.children[0].textContent= textArray[0];
+
+    let changeText = textArray[1];
+
+    document.body.addEventListener('click', function () {
+    root.children[0].textContent= changeText;
+    // 문서에 body부분을 clicj하면 두번째 인수로 자리 잡혀있는 함수 내용을 실행 시켜줘 
+    // 함수 내용 === 알고리즘 root에 있는 자식의 0번째가 있는데 태그일꺼야 거기에 texnode키에 변수 문자열 재할당해줘
+
+    } );
+  </script>
+  
+</body>
+</html>
